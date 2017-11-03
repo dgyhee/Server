@@ -1,0 +1,3 @@
+# strategy: LLL -> (43,20) -> (49,29)
+ maxcost=463.7793912 bs=43 prob=0.493833 alpha=1.03306 maxtour=500 minlogfec=782.039 optpfunc preprocess extendblocksize modifyprobability heuristicbreak verbose=1
+ maxcost=2585.096731 bs=49 prob=0.347189 alpha=1.03638 maxtour=500 minlogfec=708.442 optpfunc preprocess extendblocksize modifyprobability heuristicbreak verbose=1

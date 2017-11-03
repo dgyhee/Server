@@ -1,0 +1,26 @@
+CRTACD 돌리는법: auxiliary input을 만들면서
+./makelat (CRTACD.cpp output)
+./fplll matrix -a lll|tee output.txt &
+./check (outputcheck.cpp output)
+./result & (eigencheck.cpp output)
+
+
+g++ -O3 CRTACD.cpp -pthread -std=c++11 -lntl -lgmp -lm -o makelat
+g++ -O3 outputcheck.cpp -pthread -std=c++11 -lntl -lgmp -lm -o check
+g++ -O3 eigencheck.cpp -pthread -std=c++11 -lntl -lgmp -lm -o result
+
+
+
+CRTACD with factor 돌리는법
+./makelat (facCRTACD.cpp output)
+./fplll matrix -a lll|tee output.txt &
+./check (outputcheck.cpp output)
+./result & (feigencheck.cpp output)
+./fplll rational -a lll|tee ZZcheck.txt
+./zzcheck (lastcheck.cpp output)
+
+
+g++ -O3 facCRTACD.cpp -pthread -std=c++11 -lntl -lgmp -lm -o makelat
+g++ -O3 outputcheck.cpp -pthread -std=c++11 -lntl -lgmp -lm -o check
+g++ -O3 feigencheck.cpp -pthread -std=c++11 -lntl -lgmp -lm -o result
+g++ -O3 lastcheck.cpp -pthread -std=c++11 -lntl -lgmp -lm -o zzcheck
